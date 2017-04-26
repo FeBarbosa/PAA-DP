@@ -8,22 +8,26 @@ int passosn = 0;
 
 using namespace std;
 
-map<int, int> memo;
 
+map<int, int> memo; //utilizado para memorização dos cálculos
+
+// Forma sem DP ----------------------------------------------
 int fibn(int n)
 {
   if(n <= 2)
   {
-    passosn++;
+    passosn++; //contagem dos passos de recursão
     return 1;
   }
   else
   {
-    passosn++;
+    passosn++; //contagem dos passos de recursão
     return fibn(n-1) + fibn(n-2);
   }
 }
 
+
+// Forma com DP ---------------------------------------------
 int fib(int n)
 {
   int f;
@@ -43,6 +47,8 @@ int fib(int n)
   return f;
 
 }
+
+//----------------------------------------------------------
 
 int main()
 {
